@@ -1,24 +1,11 @@
-@import "./mixins";
-@import "./login";
-@import "./dashboard";
-@import "./auth";
 @use "./variables" as *;
-
-// ===============================
-// GOOGLE FONT & ICONS
-// ===============================
-// @use "bootstrap/scss/bootstrap";
+@use "./mixins";
+@use "./login";
+@use "./dashboard";
+@use "./auth";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
-
-
-
-
-
-// ===============================
-// GLOBAL
-// ===============================
 
 * {
   margin: 0;
