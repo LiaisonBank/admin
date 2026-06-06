@@ -1,0 +1,37 @@
+// ===============================
+// GOOGLE FONT & ICONS
+// ===============================
+// @use "bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+@import "./variables";
+@import "./mixins";
+@import "./login";
+@import "./dashboard";
+@import "./auth";
+
+
+
+// ===============================
+// GLOBAL
+// ===============================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8d9ff !important;
+    overflow: hidden;
+}
+.d-none{
+    display: none;
+}

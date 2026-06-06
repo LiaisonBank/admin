@@ -1,0 +1,13 @@
+// ===============================
+// MIXINS
+// ===============================
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition($values...) {
+  transition: $values;
+}
