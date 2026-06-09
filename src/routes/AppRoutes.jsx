@@ -8,7 +8,7 @@ import ProtectedRoute from "../components/ProtectedRoute";
 import Dashboard from "../pages/dashboard/Dashboard";
 import Articles from "../pages/articles/Articles";
 import Ceodesk from "../pages/ceodesk/CeoDesk";
-import Pressrelease from "../pages/pressrelease/PressRelease";
+import Pressrelease from "../pages/pressrelease/Pressrelease";
 import Users from "../pages/users/Users";
 import Settings from "../pages/settings/Settings";
 
