@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export default function DashboardLayout() {
   return (
     <>
-      <div className="m-0 p-0 container-fluid dashboard-layout">
+      <div className="m-0 p-0 container-fluid dashboard-layout">  
         <div className="row">
             <Navbar />
             <Sidebar />
