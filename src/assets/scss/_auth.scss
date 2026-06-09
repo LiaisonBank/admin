@@ -4,6 +4,12 @@
     $color_2: #888;
     $color_3: #fff;
     $border-color_1: #9300b6;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8d9ff !important;
+    overflow: hidden;
     img{
         max-width: 150px;
         margin-bottom: 20px;

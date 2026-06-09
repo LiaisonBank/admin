@@ -1,11 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo_adminpanel.png"; // adjust path as needed
 
 
 export default function Login() {
+  const navigate = useNavigate();
   const [isRegister, setIsRegister] = useState(false);
+  const [loginError, setLoginError] = useState("");
 
- const showLogin = () => {
+  const ADMIN_CREDENTIALS = {
+    username: "admin",
+    password: "Admin@123",
+  };
+
+  const showLogin = () => {
     resetRegisterForm();
     setIsRegister(false);
   };
@@ -67,8 +75,21 @@ export default function Login() {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    // Login API Call
-    console.log("Login Submit");
+
+    const { username, password } = loginForm;
+
+    if (
+      username === ADMIN_CREDENTIALS.username &&
+      password === ADMIN_CREDENTIALS.password
+    ) {
+      // Store login session
+      localStorage.setItem("isAuthenticated", "true");
+
+      // Redirect Dashboard
+      navigate("/dashboard");
+    } else {
+      setLoginError("Invalid username or password");
+    }
   };
 
   const handleRegisterSubmit = (e) => {
@@ -128,6 +149,11 @@ export default function Login() {
               />
               <i className="bx bxs-lock-alt" />
             </div>
+            {loginError && (
+              <div className="login-error">
+                {loginError}
+              </div>
+            )}
 
             <div className="forgot-link">
                <button

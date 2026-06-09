@@ -1,27 +1,40 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "../pages/auth/login";
-import Dashboard from "../pages/dashboard/Dashboard"
+import Login from "../pages/auth/Login";
 
-import ProtectedRoute from "../components/ProtectedRoute"
+import DashboardLayout from "../layouts/DashboardLayout";
+import ProtectedRoute from "../components/ProtectedRoute";
+
+import Dashboard from "../pages/dashboard/Dashboard";
+import Articles from "../pages/articles/Articles";
+import Ceodesk from "../pages/ceodesk/CeoDesk";
+import Pressrelease from "../pages/pressrelease/PressRelease";
+import Users from "../pages/users/Users";
+import Settings from "../pages/settings/Settings";
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-
+        {/* Public Route */}
         <Route path="/" element={<Login />} />
 
+        {/* Protected Routes with Common Layout */}
         <Route
-          path="/dashboard"
           element={
             <ProtectedRoute>
-              <Dashboard />
+              <DashboardLayout />
             </ProtectedRoute>
           }
-        />
-
+        >
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/ceodesk" element={<Ceodesk />} />
+          <Route path="/pressrelease" element={<Pressrelease />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/settings" element={<Settings />} />
+        </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
