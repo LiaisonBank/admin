@@ -117,7 +117,6 @@ export default function Login() {
               className="auth-logo"
             />
             <h1>Login</h1>
-
             <div className="input-box">
               <input
                 type="text"
