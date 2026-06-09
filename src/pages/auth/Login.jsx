@@ -78,16 +78,25 @@ export default function Login() {
 
     const { username, password } = loginForm;
 
+    console.log("Username:", username);
+    console.log("Password:", password);
+
     if (
       username === ADMIN_CREDENTIALS.username &&
       password === ADMIN_CREDENTIALS.password
     ) {
-      // Store login session
+      console.log("Login Success");
+
       localStorage.setItem("isAuthenticated", "true");
 
-      // Redirect Dashboard
+      console.log(
+        "Stored Value:",
+        localStorage.getItem("isAuthenticated")
+      );
+
       navigate("/dashboard");
     } else {
+      console.log("Login Failed");
       setLoginError("Invalid username or password");
     }
   };
