@@ -88,11 +88,10 @@ export default function Login() {
       console.log("Login Success");
 
       localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("username", username); // ✅ store username
 
-      console.log(
-        "Stored Value:",
-        localStorage.getItem("isAuthenticated")
-      );
+      console.log("Stored Value:", localStorage.getItem("isAuthenticated"));
+      console.log("Stored Username:", localStorage.getItem("username"));
 
       navigate("/dashboard");
     } else {
