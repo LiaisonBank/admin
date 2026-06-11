@@ -108,7 +108,8 @@
   --sidebar-border: #d9e3f1;
   --sidebar-color: #223248;
   --sidebar-muted-color: #6b809d;
-  --sidebar-hover-bg: rgba(14, 165, 164, 0.1);
+  --sidebar-hover-bg: rgba(239, 127, 26, 0.1);
+  // --sidebar-hover-bg: rgba(14, 165, 164, 0.1);
   --sidebar-active-bg: rgba(14, 165, 164, 0.16);
   --sidebar-active-color: #ffffff;
   /* Cards */
@@ -133,7 +134,8 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: var(--default-color);
-    background: #e8d9ff !important;
+    // background: #e8d9ff !important;--background-color
+    background: var(--background-color) !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -162,6 +164,7 @@ body {
         right: 0;
         height: var(--header-height);
         background: var(--header-bg);
+        // background: var(--header-bg);
         -webkit-backdrop-filter: saturate(140%) blur(8px);
         backdrop-filter: saturate(140%) blur(8px);
         border-bottom: 1px solid var(--header-border);
