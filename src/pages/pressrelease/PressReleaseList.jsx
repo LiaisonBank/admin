@@ -148,11 +148,34 @@ export default function PressReleaseList() {
   };
 
   return (
+    <>
+    
+      {/* Header */}
+      <div className="mb-4">
+          <div className="card-body d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+              <h2 className="mb-1">
+                List view of Press Releases
+              </h2>
+            </div>
+  
+            <div className="d-flex gap-2">
+              <Link
+                to="/pressrelease/add"
+                className="btn btn-primary"
+              >
+                + Add Press Release
+              </Link>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+    
     <div className="card border-0 shadow-sm">
 
-      {/* Header */}
-
-      <div className="card-header bg-white d-flex justify-content-between align-items-center flex-wrap gap-3">
+      {/* <div className="card-body bg-white d-flex justify-content-between align-items-center flex-wrap gap-3">
         <h4 className="mb-0">
           Press Releases
         </h4>
@@ -163,7 +186,7 @@ export default function PressReleaseList() {
         >
           + Add Press Release
         </Link>
-      </div>
+      </div> */}
 
       {/* Filters */}
 
@@ -485,5 +508,6 @@ export default function PressReleaseList() {
       </div>
 
     </div>
+    </>
   );
 }

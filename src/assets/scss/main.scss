@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  // font-family: "Poppins", sans-serif;
 }
 
 /* Fonts */
@@ -154,6 +154,24 @@ body {
         }
       }
     }
+    .btn-danger {
+      background:#be2a2a 186.4%;
+      border:none;
+    }
+    .btn-primary{
+      background:  linear-gradient(#ef7f1a 5.85%,#be2a2a 186.4%);
+      border:none;
+    }
+    button {
+      &.page-link {
+        background:  linear-gradient(#ef7f1a 5.85%,#be2a2a 186.4%);
+        border:none;
+        color:white;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
   .dashboard-layout {
     display: flex;
     min-height: 100vh;
@@ -193,6 +211,10 @@ body {
             padding:0;
             text-transform: capitalize;
           }
+          button{
+            background:  linear-gradient(#ef7f1a 5.85%,#be2a2a 186.4%);
+            border:none;
+          }
         }
         
     }
@@ -227,7 +249,7 @@ body {
                 gap: 10px;
                 padding: 8px 10px;
                 border-radius: var(--radius-lg);
-                font-size: 0.8125rem;
+                font-size: 1rem;
                 font-weight: 600;
                 color: var(--sidebar-color);
                 text-decoration: none;
@@ -305,7 +327,7 @@ body {
                     margin-left: 14px;
                     padding: 7px 10px 7px 12px;
                     border-radius: var(--radius-md);
-                    font-size: 0.785rem;
+                    font-size: 1rem;
                     font-weight: 500;
                     color: var(--sidebar-muted-color);
                     text-decoration: none;
@@ -569,17 +591,17 @@ body {
       }
 
       &-copyright {
-        font-size: 0.74rem;
-        color: var(--muted-color);
+        font-size: 1rem;
+        color: var(--light-color);
         line-height: 1.4;
 
         a {
-          color: var(--accent-color);
+          color:#ef7f1a;
           text-decoration: none;
           font-weight: 700;
 
           &:hover {
-            text-decoration: underline;
+            // text-decoration: underline;
           }
         }
       }
